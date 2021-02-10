@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSC1026</title>
+    <!-- bootstrap frameworks and jquery ui -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/base/jquery-ui.css" type="text/css"
+        media="all">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/live.css">
+    <!-- bootstrap frameworks and jquery ui end here -->
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- adapted from https://bootstrapious.com/p/bootstrap-sidebar -->
+        <nav id="sidebar" class="navbar navbar-inverse">
+            <div class="sidebar-header">
+                <h3>CSC1026</h3>
+            </div>
+            <ul class="list-unstyled ">
+                <p>Cong Danh Tran</p>
+                <li class="active">
+                    <a href="../index.html">Home</a>
+                </li>
+                <li>
+                    <a href="#historySubmenu" data-toggle="collapse" aria-expanded="false">History</a>
+                    <ul class="collapse list-unstyled" id="historySubmenu">
+                        <li>
+                            <a href="../history.html#timeline">Time Line</a>
+                        </li>
+                        <li>
+                            <a href="../history.html#tcp">TCP Protocol</a>
+                        </li>
+                        <li>
+                            <a href="../history.html#http">HTTP Protocol</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#tutSubmenu" data-toggle="collapse" aria-expanded="false">Tutorials</a>
+                    <ul class="collapse list-unstyled" id="tutSubmenu">
+                        <li>
+                            <a href="tut.html">Selector Reference</a>
+                        </li>
+                        <li>
+                            <a href="tut1.html">Colors</a>
+                        </li>
+                        <li>
+                            <a href="tut2.html">Background image</a>
+                        </li>
+                        <li>
+                            <a href="tut3.html">Table</a>
+                        </li>
+                        <li>
+                            <a href="tut4.html">Simple Menu Bar</a>
+                        </li>
+                        <li>
+                            <a href="tut5.html">Form</a>
+                        </li>
+                        <li>
+                            <a href="tut7.html">Border Radius</a>
+                        </li>
+                        <li>
+                            <a href="tut6.html">Embeded Content</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="../about.html">About</a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <!-- content-->
+        <div id="content">
+            <button type="button" id="sidebarCollapse" class="btn navbar-btn collapsebutton" style=" position: absolute;top: 0;left: 0; margin: 0;background-color: #fafafa">
+                <i class="glyphicon glyphicon-align-left"></i>
+            </button>
+            <!-- place content here -->
+            <div class="container-fluid h-100">
+                <div class="row h-100">
+                    <div class="col-sm-6 ">
+                        <label>HTML</label>
+                        <button type="button" id="btnbeautify" class="btn btn-xs btn-default btn-beautify">Beaufify</button>
+
+                        <textarea class="innerbox html form-control" placeholder="place html here">
+                                <h2>Student information form</h2>
+                            <form onSubmit="">
+
+                                    <label for="firstname">First Name</label>
+                                    <input type="text" id="firstname" name="firstname" placeholder="Input First Name">
+                                
+                                    <label for="Lastname">Last Name</label>
+                                    <input type="text" id="lasstname" name="lastname" placeholder="Input Last Name">
+                                
+                                    <label for="country">Country</label>
+                                    <select id="country" name="country">
+                                      <option value="china">China</option>
+                                      <option value="uk">United Kingdom</option>
+                                      <option value="usa">USA</option>
+                                    </select>
+                                  
+                                    <label for="courses">Current Course</label>      
+  <select name="courses">
+    <option value="CS">Computer Science</option>
+    <option value="BS">Bussiness</option>
+    <option value="CH">Chemistry</option>
+    <option value="EE">Electricial Engineering</option>
+  </select>
+  <input type="submit" value="Submit">
+                            </form>
+                            
+                        </textarea>
+                        <br/>
+                        <label>CSS</label>
+                        <div class="btn-group btn-toggle2">
+                            <button class="on btn btn-xs btn-primary active">ON</button>
+                            <button class="off btn btn-xs btn-default ">OFF</button>
+                        </div>
+                        <textarea class="innerbox css form-control" placeholder="place css here">
+                                input, select {
+                                    width: 100%;
+                                    padding: 10px ;
+                                    margin: 8px 0;
+                                    border-radius: 3px;
+                                }
+                                
+                                label{
+                                font: 15px  sans-serif;
+                                }
+                                
+                        </textarea>
+                    </div>
+                    <div class="col-sm-6">
+                        <label>Live Preview</label>
+                        <div class="btn-group btn-toggle">
+                            <button class="on btn btn-xs btn-primary active">ON</button>
+                            <button class="off btn btn-xs btn-default ">OFF</button>
+                        </div>
+                        <div id="frameWrap">
+                            <iframe id="live_update">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end here -->
+        </div>
+        <!-- content end here -->
+    </div>
+    <!--jquery library and custom javascript -->
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="https://yuku-t.com/jquery-textcomplete/media/javascripts/jquery.textcomplete.js"></script>
+    <script src="https://yuku-t.com/jquery-overlay/jquery.overlay.js"></script>
+    <!--from http://lovasoa.github.io/tidy-html5/ -->
+    <script src="../js/html-tidy.js"></script>
+    <!--from https://github.com/senchalabs/cssbeautify -->
+    <script src="../js/cssbeautify.js"></script>
+    <script src="../js/live.js"></script>
+    <!--jquery library and custom javascript end here -->
+</body>
+
+</html>

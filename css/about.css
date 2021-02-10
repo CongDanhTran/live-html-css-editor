@@ -1,0 +1,28 @@
+/*  set full height*/
+html,body{
+    height: 100%;
+ 
+}
+
+/* positioning the logo*/
+.logo{
+    margin-left: 30%;
+    margin-right: 30%;
+   width: 40%;
+
+}
+
+/*  all test in the middle */
+.middle{
+ text-align: center;
+}
+
+/*  background  */
+.background{
+    position: relative;
+    transform: matrix(0.99452, -0.10453, 0.10453, 0.99452, 0, -3.91973);
+    background:#f5f5f5;
+    width: 200%;
+    height: 500px;
+    left:-100px;
+}

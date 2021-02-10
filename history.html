@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>History</title>
+    <!-- bootstrap frameworks and jquery ui -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/base/jquery-ui.css" type="text/css"
+        media="all">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/history.css">
+    <!-- bootstrap frameworks and jquery ui end here -->
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- adapted from https://bootstrapious.com/p/bootstrap-sidebar -->
+        <!-- adapted from https://bootstrapious.com/p/bootstrap-sidebar -->
+        <nav id="sidebar" class="navbar navbar-inverse">
+            <div class="sidebar-header">
+                <h3>CSC1026</h3>
+            </div>
+            <ul class="list-unstyled ">
+                <p>Cong Danh Tran</p>
+                <li class="active">
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="#historySubmenu" data-toggle="collapse" aria-expanded="false">History</a>
+                    <ul class="collapse list-unstyled" id="historySubmenu">
+                        <li>
+                            <a href="history.html#timeline">Time Line</a>
+                        </li>
+                        <li>
+                            <a href="history.html#tcp">TCP Protocol</a>
+                        </li>
+                        <li>
+                            <a href="history.html#http">HTTP Protocol</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#tutSubmenu" data-toggle="collapse" aria-expanded="false">Tutorials</a>
+                    <ul class="collapse list-unstyled" id="tutSubmenu">
+                        <li>
+                            <a href="tutorials/tut.html">Selector Reference</a>
+                        </li>
+                        <li>
+                            <a href="tutorials/tut1.html">Colors</a>
+                        </li>
+                        <li>
+                            <a href="tutorials/tut2.html">Background image</a>
+                        </li>
+                        <li>
+                            <a href="tutorials/tut3.html">Table</a>
+                        </li>
+                        <li>
+                            <a href="tutorials/tut4.html">Simple Menu Bar</a>
+                        </li>
+                        <li>
+                            <a href="tutorials/tut5.html">Form</a>
+                        </li>
+                        <li>
+                            <a href="tutorials/tut7.html">Border Radius</a>
+                        </li>
+                        <li>
+                            <a href="tutorials/tut6.html">Embeded Content</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- content-->
+        <div id="content">
+            <button type="button" id="sidebarCollapse" class="btn navbar-btn collapsebutton" style=" position: absolute;top: 0;left: 0; margin: 0;background-color: #fafafa">
+                <i class="glyphicon glyphicon-align-left"></i>
+            </button>
+            <!-- place content here -->
+            <div class="container-fluid h-100S">
+                <div class="row h-100 middle">
+
+                    <div id="timeline">
+
+                        <label>What is the Web?</label>
+                        <blockquote>
+                            <p>"The Web is an abstract (imaginary) space of information … On the Net, the connections are cables
+                                between computers; on the Web, connections are hypertext links … The Web made the net useful
+                                because people are really interested in information."</p>
+                            <footer>From W3School</footer>
+                        </blockquote>
+                        <div class="container">
+                            <iframe src="https://www.youtube.com/embed/9hIQjrMHTv4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div id="tcp">
+
+                        <label>Introduction to Transmission Control Protocol (TCP) </label>
+                        <blockquote>
+                            <p>TCP stands for Transmission Control Protocol, creates connections between clients/severs with
+                                network interfaces, is the bone of the Internet. Messages transfered by TCP procotol are
+                                splitted into smaller packets then reassemble on the other side</p>
+                        </blockquote>
+                        <video preload="metadata" width="80%" controls>
+                            <source src="videos/tcp.mp4" type="video/mp4"> Your browser does not support the video tag.
+                        </video>
+
+
+                    </div>
+                    <hr/>
+                    <div id="http">
+
+                        <label>Introduction to Hyper Text Transfer Protocol (HTTP)</label>
+                        <blockquote>
+                            <p>HTTP stands for HyperText Transfer Protocol,is an application layer running over TCP protocol,
+                                allows communications between clients and servers </p>
+                        </blockquote>
+
+                        <video preload="metadata" width="80%" controls>
+                            <source src="videos/http.mp4" type="video/mp4"> Your browser does not support the video tag.
+                        </video>
+
+
+
+                    </div>
+
+                </div>
+                <!-- content end here -->
+            </div>
+            <!--jquery library and custom javascript -->
+            <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+            <script src="https://yuku-t.com/jquery-textcomplete/media/javascripts/jquery.textcomplete.js"></script>
+            <script src="https://yuku-t.com/jquery-overlay/jquery.overlay.js"></script>
+
+            <!--jquery library and custom javascript end here -->
+
+            <script type="text/javascript">
+                $(document).ready(function () {
+
+
+
+                    $("#sidebar").mCustomScrollbar({
+                        theme: "minimal"
+                    });
+                });
+
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar, #content').toggleClass('active');
+                    $('.collapse.in').toggleClass('in');
+                    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                });
+
+            </script>
+</body>
+
+</html>

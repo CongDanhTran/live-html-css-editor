@@ -1,0 +1,26 @@
+/*  set width for input box */
+.innerbox {
+	max-width: 100%;
+	min-width: 100%;
+	overflow: scroll;
+}
+
+/*  Iframe width and background color */
+#live_update {
+	width: 100%;
+	border: 0;
+	background-color: #fff
+}
+
+/*  iframe border  */
+#frameWrap {
+	width: 100%;
+	border-radius: 5px;
+  border: 1px  solid #ccc;
+  box-shadow: inset 1px rgba(0, 0, 0, .075);
+}
+
+/*  button beautify on the right  */
+.btn-beautify {
+    float: right;
+}
